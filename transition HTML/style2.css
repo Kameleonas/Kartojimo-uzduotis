@@ -1,0 +1,251 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+    font-family: "Raleway";
+  }
+body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5vh;
+}
+/*          HEADER          */
+header{
+    width: 98%;
+    height: 12vh;
+    min-height: 110px;
+    background: linear-gradient(to right, blue,rgb(36, 230, 156),blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hamburger{
+    background-color: rgb(94, 94, 255);
+    border: none;
+}
+#hamburger{
+    display: none;
+}
+header img{
+    height: 50px;
+    width: 57px;
+    margin-left: 10px;
+    background-color: blue;
+}
+.menuItems{
+    display: flex;
+}
+h2{
+    text-decoration: none;
+    color: white;
+    padding: 15px 0 15px;
+    margin: 0 20px;
+    overflow: hidden;
+}
+h2:first-of-type{
+    padding-left: 10px;
+}
+.serchField{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+.serchField ::placeholder{
+    font-size: 1.3rem;
+    padding-left: 1vw;
+    opacity: .5;
+}
+.serchField input{
+    width: 27vw;
+    height: 50px;
+    min-width: 250px;
+    border-radius: 50px;
+    text-align: center;
+}
+.serchField img{
+    padding: 0 30px 0 0;
+    width: 50px;
+    height: 50px;
+}
+/*          HEADER          */
+/*          MID            */
+.mid{
+    margin-top: .5vh;
+    width: 60vw;
+    background-color: rgb(221, 152, 120);
+    color: white;
+    padding: 30px 20px 0px 20px;
+}
+.steps{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+[class^='square']{
+    color: black;
+    width: 30%;
+    height: 40px;
+    border: transparent;
+    background-color: white;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+[class^="square"]{
+    background-color: greenyellow;
+}
+[class^="line"]{
+    width: 26%;
+    height: 5px;
+    background-color: greenyellow;
+    position: absolute;
+    margin: 0 0 55px 4vw;
+}
+.lineTwo{
+    width: 25%;
+    height: 5px;
+    background-color: greenyellow;
+    position: absolute;
+    margin: 0 0 55px 30.2vw;
+}
+.mid span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*          MID            */
+/*          MAIN            */
+main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(96, 202, 96);
+    border-radius: 10px;
+    padding: 1vh 1vw 1.5vh 1vw;
+    margin-top: 5px;
+    min-width: 340px;
+}
+[class*="box"]{
+    width: 17vw;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin:.3vh;
+    padding-left: 10px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(236, 236, 236, .6);
+    min-width: 329px;
+}
+input{
+    margin-right: 10px;
+}
+textarea{
+    width: 100%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+.boxFour{
+    height: fit-content;
+}
+.boxFour span{
+    align-self: flex-start;
+    margin-top: 10px;
+}
+textarea{
+    height: 80px;
+    width: 178px;
+    margin: 5px 10px;
+}
+.boxSeven{
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+    padding-bottom: 5px;
+}
+.boxSeven span{
+    margin-top: 10px;
+}
+img{
+    width: 30px;
+    height: 15px;
+}
+.cards{
+    margin-top: 20px;
+    font-size: .7rem;
+    display: flex;
+    flex-direction: row;
+}
+.submit{
+    font-size: 1.3rem;
+    align-self: center;
+    background-color: green;
+    color: white;
+    border-radius: 25px;
+    border: transparent;
+    padding: 5px;
+    margin-top: 10px;
+    width: 8vw;
+    min-width: 97.5px;
+    height: 4vh;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #ccc;
+}
+/*          MAIN            */
+/*          MEDIA           */
+@media screen and (max-width: 1150px) {
+    .lineOne{
+        width: 22%;
+        margin: 0 0 50px 7.3vw;
+    }
+    .lineTwo{
+        width: 22%;
+        margin: 0 0 50px 30.4vw;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .menuItems{
+        flex-direction: column;
+        position: absolute;
+        top: 115px;
+    }
+    #hamburger ~ .menuItems h2{
+        border: 0;
+        padding: 0;
+        height: 0;
+        margin: 0;
+    }
+    #hamburger:checked ~ .menuItems h2{
+        overflow: hidden;
+        height: 5vh;
+        min-height: 32px;
+        padding: 15px;
+        padding-bottom: 0;
+        border: 1px solid rgb(16, 16, 70);
+        background: linear-gradient(to right, rgb(152, 152, 248),rgb(9, 155, 223));
+        z-index: 2;
+    }
+    #hamburger:checked ~ label img{
+        animation: spin 3s infinite linear;
+    }
+    @keyframes spin {
+        from{transform:rotate(0deg);}
+        to{transform:rotate(360deg);}
+    }
+    header label{
+        display: contents;
+    }
+}
+/*          MEDIA           */
